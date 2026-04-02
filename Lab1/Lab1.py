@@ -3,6 +3,7 @@ from google.genai import types
 import os
 from dotenv import load_dotenv
 
+load_dotenv()
 client = genai.Client(api_key= os.getenv("lab1_key"))
 
 def summarize_text(text):

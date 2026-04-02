@@ -4,6 +4,9 @@ from langchain_core.output_parsers import StrOutputParser
 import os
 from dotenv import load_dotenv
 # 1. Initialize Grok (using the OpenAI-compatible interface)
+
+load_dotenv()
+
 llm = ChatOpenAI(
     model="grok-2-latest", 
     api_key=os.getenv("lab4_key"),

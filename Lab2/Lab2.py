@@ -3,6 +3,9 @@ from google import genai
 from google.genai import types
 import os
 from dotenv import load_dotenv
+
+load_dotenv()
+
 # 1. Define the "Tool" (The actual Python function)
 def get_weather(city: str):
     """Retrieves the current weather for a given city."""

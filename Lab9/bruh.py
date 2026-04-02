@@ -1,10 +1,12 @@
 import os
+from dotenv import load_dotenv
 from langchain_community.document_loaders import TextLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_huggingface import HuggingFaceEmbeddings, HuggingFaceEndpoint, ChatHuggingFace
 from langchain_community.vectorstores import FAISS
 from langchain.chains import RetrievalQA
 
+load_dotenv()
 # 1. SETUP: Replace with your actual HF token
 os.environ["HUGGINGFACEHUB_API_TOKEN"] = os.getenv("lab9_key")
 
